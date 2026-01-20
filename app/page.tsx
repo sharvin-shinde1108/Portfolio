@@ -1,8 +1,6 @@
 "use client";
  
 import { useState } from "react";
-<<<<<<< HEAD
-import Image from "next/image";
  
 type Project = {
   title: string;
@@ -83,88 +81,6 @@ export default function Page() {
     },
   ];
  
-=======
- 
-type Project = {
-  title: string;
-  description: string;
-  tech: string[];
-  github: string;
-  demo?: string;
-};
- 
-export default function Page() {
-  const [isPhoneVisible, setIsPhoneVisible] = useState(false);
-  const [copied, setCopied] = useState(false);
-  const name = "Sharvin Shinde";
- 
-  const links = {
-    github: "https://github.com/sharvin-shinde1108",
-    linkedin: "https://www.linkedin.com/in/sharvin-shinde/",
-    email: "mailto:sharvin.s.shinde@gmail.com",
-  };
- 
-  const handleCopyPhone = () => {
-    navigator.clipboard.writeText("+918898949804");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
- 
-  const skillCards: { title: string; items: string[] }[] = [
-    {
-      title: "Domain Expertise",
-      items: [
-        "GenAI & Agentic AI",
-        "RAG Systems",
-        "LLMs",
-        "Machine Learning",
-        "Deep Learning",
-        "Data Visualization",
-        "Startups",
-        "MLOps",
-      ],
-    },
-    {
-      title: "Languages & Frameworks",
-      items: [
-        "Python",
-        "SQL",
-        "Git/GitHub",
-        "Docker",
-        "LangChain",
-        "FastAPI",
-        "Microsoft Azure",
-        "API Design",
-        "Tableau",
-      ],
-    },
-  ];
- 
-  const projects: Project[] = [
-    {
-      title: "FinChat - Stock Analysis & Educational Chatbot",
-      description:
-        "Gradio-based financial chatbot powered by a local LLM and FAISS RAG to explain stock concepts and answer user queries, with automated technical indicator analysis and charting.",
-      tech: ["Gradio", "Local LLM", "FAISS", "RAG", "yfinance", "matplotlib", "RAGAS", "LangSmith", "uv"],
-      github: "https://github.com/sharvin-shinde1108/financial_analyst_agent",
-    },
-    {
-      title: "Chat Persistent RAG Application",
-      description:
-        "Context-aware multi-PDF chat app using LangChain + RAG for semantic search and conversational memory, optimized for fast retrieval over long documents.",
-      tech: ["LangChain", "RAG", "PyPDF2", "Chunking", "Embeddings", "FAISS", "Streamlit"],
-      github: "https://github.com/sharvin-shinde1108/multipdf-chat-app",
-    },
-    {
-      title: "CineMatch - Movie Recommendation System",
-      description:
-        "Content-based recommendation system using NLP + cosine similarity to suggest similar movies, with TMDb integration to display posters in a Streamlit UI.",
-      tech: ["Python", "NLP", "TF-IDF", "Cosine Similarity", "TMDb API", "Streamlit"],
-      github: "https://github.com/sharvin-shinde1108/cinematch",
-    },
-  ];
- 
->>>>>>> a9702d9 (Vercel deploy error)
   return (
     <main className="min-h-screen bg-[#09090b] text-zinc-100 selection:bg-indigo-500/30">
       {/* Background Grid Pattern */}
@@ -362,19 +278,11 @@ export default function Page() {
                   aria-label="Copy phone number"
                 >
                   {copied ? (
-<<<<<<< HEAD
-                    <svg title="Copied" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-green-400">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  ) : (
-                    <svg title="Copy" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-=======
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-green-400">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                   ) : (
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
->>>>>>> a9702d9 (Vercel deploy error)
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
                     </svg>
                   )}
