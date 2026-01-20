@@ -1,8 +1,9 @@
 "use client";
-
+ 
 import { useState } from "react";
+<<<<<<< HEAD
 import Image from "next/image";
-
+ 
 type Project = {
   title: string;
   description: string;
@@ -10,24 +11,24 @@ type Project = {
   github: string;
   demo?: string;
 };
-
+ 
 export default function Page() {
   const [isPhoneVisible, setIsPhoneVisible] = useState(false);
   const [copied, setCopied] = useState(false);
   const name = "Sharvin Shinde";
-
+ 
   const links = {
     github: "https://github.com/sharvin-shinde1108",
     linkedin: "https://www.linkedin.com/in/sharvin-shinde/",
     email: "mailto:sharvin.s.shinde@gmail.com",
   };
-
+ 
   const handleCopyPhone = () => {
     navigator.clipboard.writeText("+918898949804");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
+ 
   const skillCards: { title: string; items: string[] }[] = [
     {
       title: "Domain Expertise",
@@ -57,7 +58,7 @@ export default function Page() {
       ],
     },
   ];
-
+ 
   const projects: Project[] = [
     {
       title: "FinChat - Stock Analysis & Educational Chatbot",
@@ -81,12 +82,94 @@ export default function Page() {
       github: "https://github.com/sharvin-shinde1108/cinematch",
     },
   ];
-
+ 
+=======
+ 
+type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  github: string;
+  demo?: string;
+};
+ 
+export default function Page() {
+  const [isPhoneVisible, setIsPhoneVisible] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const name = "Sharvin Shinde";
+ 
+  const links = {
+    github: "https://github.com/sharvin-shinde1108",
+    linkedin: "https://www.linkedin.com/in/sharvin-shinde/",
+    email: "mailto:sharvin.s.shinde@gmail.com",
+  };
+ 
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText("+918898949804");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+ 
+  const skillCards: { title: string; items: string[] }[] = [
+    {
+      title: "Domain Expertise",
+      items: [
+        "GenAI & Agentic AI",
+        "RAG Systems",
+        "LLMs",
+        "Machine Learning",
+        "Deep Learning",
+        "Data Visualization",
+        "Startups",
+        "MLOps",
+      ],
+    },
+    {
+      title: "Languages & Frameworks",
+      items: [
+        "Python",
+        "SQL",
+        "Git/GitHub",
+        "Docker",
+        "LangChain",
+        "FastAPI",
+        "Microsoft Azure",
+        "API Design",
+        "Tableau",
+      ],
+    },
+  ];
+ 
+  const projects: Project[] = [
+    {
+      title: "FinChat - Stock Analysis & Educational Chatbot",
+      description:
+        "Gradio-based financial chatbot powered by a local LLM and FAISS RAG to explain stock concepts and answer user queries, with automated technical indicator analysis and charting.",
+      tech: ["Gradio", "Local LLM", "FAISS", "RAG", "yfinance", "matplotlib", "RAGAS", "LangSmith", "uv"],
+      github: "https://github.com/sharvin-shinde1108/financial_analyst_agent",
+    },
+    {
+      title: "Chat Persistent RAG Application",
+      description:
+        "Context-aware multi-PDF chat app using LangChain + RAG for semantic search and conversational memory, optimized for fast retrieval over long documents.",
+      tech: ["LangChain", "RAG", "PyPDF2", "Chunking", "Embeddings", "FAISS", "Streamlit"],
+      github: "https://github.com/sharvin-shinde1108/multipdf-chat-app",
+    },
+    {
+      title: "CineMatch - Movie Recommendation System",
+      description:
+        "Content-based recommendation system using NLP + cosine similarity to suggest similar movies, with TMDb integration to display posters in a Streamlit UI.",
+      tech: ["Python", "NLP", "TF-IDF", "Cosine Similarity", "TMDb API", "Streamlit"],
+      github: "https://github.com/sharvin-shinde1108/cinematch",
+    },
+  ];
+ 
+>>>>>>> a9702d9 (Vercel deploy error)
   return (
     <main className="min-h-screen bg-[#09090b] text-zinc-100 selection:bg-indigo-500/30">
       {/* Background Grid Pattern */}
       <div className="fixed inset-0 -z-10 h-full w-full bg-[#09090b] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-
+ 
       {/* Navbar */}
       <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-[#09090b]/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
@@ -106,7 +189,7 @@ export default function Page() {
           </nav>
         </div>
       </header>
-
+ 
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 pt-28 pb-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
@@ -121,11 +204,11 @@ export default function Page() {
               </span>
             </h1>
             <p className="max-w-2xl text-lg font-medium text-zinc-300 leading-relaxed">
-              I'm <span className="text-zinc-100 font-semibold">{name}</span>, an AI & Data Science professional. 
-              I specialize in constructing robust data pipelines, scalable ML/LLM applications, and 
+              I'm <span className="text-zinc-100 font-semibold">{name}</span>, an AI & Data Science professional.
+              I specialize in constructing robust data pipelines, scalable ML/LLM applications, and
               insightful dashboards that turn raw data into decisions.
             </p>
-
+ 
             <div className="mt-2 flex flex-wrap gap-3">
               <a
                 className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-2.5 text-sm font-bold text-black transition hover:bg-zinc-200"
@@ -133,7 +216,7 @@ export default function Page() {
               >
                 Projects
               </a>
-
+ 
               <a
                 className="inline-flex items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900/50 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-zinc-800"
                 href={links.github}
@@ -142,7 +225,7 @@ export default function Page() {
               >
                 GitHub
               </a>
-
+ 
               <a
                 className="inline-flex items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900/50 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-zinc-800"
                 href={links.linkedin}
@@ -156,14 +239,14 @@ export default function Page() {
           
           <div className="relative shrink-0">
              <div className="h-64 w-64 md:h-80 md:w-80 overflow-hidden rounded-full border-2 border-zinc-800 bg-zinc-900 ring-2 ring-indigo-500/20 shadow-2xl shadow-indigo-500/10">
-                {/* 
-                  NOTE: 
+                {/*
+                  NOTE:
                   1. Convert your HEIC file to PNG or JPG (web browsers don't support HEIC natively).
                   2. Name it 'profile.png' (or .jpg).
                   3. Place it in the 'public' folder of your project.
                 */}
-                <img 
-                  src="/profile.png" 
+                <img
+                  src="/profile.png"
                   alt={name}
                   className="h-full w-full object-cover"
                 />
@@ -171,7 +254,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-
+ 
       {/* Skills (Moved Up) */}
       <section id="skills" className="mx-auto max-w-5xl px-6 py-12">
         <h2 className="text-3xl font-bold tracking-tight text-zinc-100">Technical Expertise</h2>
@@ -191,20 +274,20 @@ export default function Page() {
           ))}
         </div>
       </section>
-
+ 
       {/* Projects (Moved Down) */}
       <section id="projects" className="mx-auto max-w-5xl px-6 py-12 border-t border-zinc-900">
         <h2 className="text-3xl font-bold tracking-tight text-zinc-100">Featured Projects</h2>
-
+ 
         <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
             <div key={p.title} className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5 transition hover:border-zinc-700 hover:bg-zinc-900/80">
               <h3 className="text-lg font-bold text-zinc-100">{p.title}</h3>
-
+ 
               <p className="mt-2 flex-grow text-sm font-medium leading-relaxed text-zinc-300">
                 {p.description}
               </p>
-
+ 
               <div className="mt-4 flex flex-wrap gap-2">
                 {/* Show ALL tasks, no slice */}
                 {p.tech.map((t) => (
@@ -216,7 +299,7 @@ export default function Page() {
                   </span>
                 ))}
               </div>
-
+ 
               <div className="mt-5 flex items-center gap-4 pt-4 border-t border-zinc-800/50">
                 <a
                   className="text-sm font-semibold text-zinc-200 hover:text-white flex items-center gap-2"
@@ -247,7 +330,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-
+ 
       {/* Contact */}
       <section id="contact" className="mx-auto max-w-5xl px-6 py-12 border-t border-zinc-900">
         <div className="rounded-2xl bg-zinc-900/50 p-8 border border-zinc-800 text-center">
@@ -255,7 +338,7 @@ export default function Page() {
           <p className="mx-auto mt-2 max-w-lg font-medium text-zinc-300">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
-
+ 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             {/* Email Button */}
             <a
@@ -268,22 +351,30 @@ export default function Page() {
               </svg>
               Email Me
             </a>
-
+ 
             {/* Hidden Contact Card */}
             {isPhoneVisible ? (
               <div className="flex min-w-[170px] items-center justify-center gap-3 rounded-lg border border-indigo-500/30 bg-indigo-500/10 px-5 py-3 text-sm font-semibold text-indigo-200 transition">
                 <span>+91 8898949804</span>
-                <button 
-                  onClick={handleCopyPhone} 
+                <button
+                  onClick={handleCopyPhone}
                   className="text-indigo-400 hover:text-white transition focus:outline-none"
                   aria-label="Copy phone number"
                 >
                   {copied ? (
+<<<<<<< HEAD
                     <svg title="Copied" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-green-400">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                   ) : (
                     <svg title="Copy" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+=======
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-green-400">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+>>>>>>> a9702d9 (Vercel deploy error)
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
                     </svg>
                   )}
@@ -300,7 +391,7 @@ export default function Page() {
                 Contact No.
               </button>
             )}
-
+ 
             <div className="flex gap-4">
                <a
                 className="inline-flex items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 px-5 py-3 text-gray-400 transition hover:bg-zinc-800 hover:text-white"
@@ -328,7 +419,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-
+ 
       <footer className="border-t border-zinc-900 py-8 text-center text-sm font-medium text-zinc-500">
         <p>© {new Date().getFullYear()} {name}. All rights reserved.</p>
         <p className="mt-1 text-xs">Built with Next.js & Tailwind CSS</p>
@@ -336,3 +427,5 @@ export default function Page() {
     </main>
   );
 }
+ 
+ 
