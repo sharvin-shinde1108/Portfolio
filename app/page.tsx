@@ -37,7 +37,6 @@ export default function Page() {
         "Machine Learning",
         "Deep Learning",
         "Data Visualization",
-        "Startups",
         "MLOps",
       ],
     },
@@ -61,8 +60,8 @@ export default function Page() {
     {
       title: "FinChat - Stock Analysis & Educational Chatbot",
       description:
-        "Gradio-based financial chatbot powered by a local LLM and FAISS RAG to explain stock concepts and answer user queries, with automated technical indicator analysis and charting.",
-      tech: ["Gradio", "Local LLM", "FAISS", "RAG", "yfinance", "matplotlib", "RAGAS", "LangSmith", "uv"],
+        "Gradio-based financial chatbot powered by a OpenAI and FAISS RAG to explain stock concepts and answer user queries, with automated technical indicator analysis and charting.",
+      tech: ["Gradio", "OpenAI", "FAISS", "RAG", "yfinance", "matplotlib", "RAGAS", "LangSmith", "uv"],
       github: "https://github.com/sharvin-shinde1108/FinChat",
       demo: "https://sharvinshinde1108-fin-a-a.hf.space/",
     },
