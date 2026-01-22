@@ -72,6 +72,7 @@ export default function Page() {
         "Context-aware multi-PDF chat app using LangChain + RAG for semantic search and conversational memory, optimized for fast retrieval over long documents.",
       tech: ["LangChain", "RAG", "PyPDF2", "Chunking", "Embeddings", "FAISS", "Streamlit"],
       github: "https://github.com/sharvin-shinde1108/multipdf-chat-app",
+      demo: "https://multidoc-rag-app.streamlit.app/",
     },
     {
       title: "CineMatch - Movie Recommendation System",
