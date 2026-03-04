@@ -81,6 +81,14 @@ export default function Page() {
       github: "https://github.com/sharvin-shinde1108/cinematch",
       demo: "https://cinematch-mrs.streamlit.app/",
     },
+    {
+      title: "Customer Churn Prediction System",
+      description:
+        "End-to-end churn prediction pipeline on the IBM Telco dataset using XGBoost with SMOTE oversampling to handle class imbalance (~26% churn rate), achieving ~0.86 AUC-ROC. Integrated MLflow for experiment tracking, hyperparameter logging, and model registry. Delivered an interactive Streamlit dashboard with EDA visualizations, model performance metrics, and a live churn prediction interface.",
+      tech: ["XGBoost", "SMOTE", "MLflow", "Streamlit", "scikit-learn", "Python"],
+      github: "https://github.com/sharvin-shinde1108/churn_predictor",
+      demo: "https://churnpredictor--telco.streamlit.app/",
+    },
   ];
  
   return (
